@@ -34,7 +34,7 @@ app.get('/home',function(req,res){
 app.post('/posthome', function(req,res){
   var qParams = [];
   for (var p in req.body){
-    qParams.push({'name':p,'value':req.body[p]})
+    qParams.push({'body_name':p,'body_value':req.body[p]})
   }
   var context = {};
   context.dataList = qParams;
